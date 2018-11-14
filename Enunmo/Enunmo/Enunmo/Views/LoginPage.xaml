@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Enunmo.Views.LoginPage"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}"
+    Title="¡Te damos la Bienvenida!">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Login}">
+            <StackLayout                
+                Padding="10,10"
+                BackgroundColor="White">
+                <ScrollView
+                    CompressedLayout.IsHeadless="True">
+                    <Image
+                        Source="logo"
+                        Aspect="AspectFill"
+                        WidthRequest="105"
+                        VerticalOptions="Center">
+                    </Image>
+                </ScrollView>
+
+                <Button
+                    Text="DOMICILIOS: 3192489193"
+                    TextColor="White"                    
+                    BackgroundColor="OrangeRed"
+                    HorizontalOptions="CenterAndExpand"
+                    BorderRadius="20"
+                    HeightRequest="35">
+
+                </Button>
+                <ActivityIndicator
+                    VerticalOptions="CenterAndExpand"
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}">
+                    
+                </ActivityIndicator>
+                <Grid>
+                    <Grid.ColumnDefinitions>                        
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Usuario"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        />
+                    <Entry             
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Placeholder="Ingrese su usuario..."
+                        FontAttributes="Italic"
+                        Text="{Binding Usuario, Mode=TwoWay}"
+                        >
+                    </Entry>
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Contraseña"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="CenterAndExpand">
+                    </Label>
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Placeholder="Ingrese su contraseña..."
+                        IsPassword="True"
+                        FontAttributes="Italic"
+                        Text="{Binding Contrasena, Mode=TwoWay}"
+                        >
+                    </Entry>
+                </Grid>
+                <StackLayout
+                    Orientation="Horizontal">
+                    <Label
+                        Text="¿Olvidaste la contraseña?"
+                        TextColor="Blue"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Switch
+                        VerticalOptions="Center"
+                        HorizontalOptions="EndAndExpand"
+                        IsToggled="{Binding Recordado, Mode=TwoWay}">                        
+                    </Switch>
+                </StackLayout>
+                <StackLayout
+                    Margin="75,10">
+                    <Button
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="25"
+                        HeightRequest="50"
+                        TextColor="LimeGreen"
+                        Text="INGRESAR"
+                        FontAttributes="Bold"
+                        Command="{Binding IngresarCommand}"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Button
+                        HeightRequest="50"
+                        BackgroundColor="LimeGreen"
+                        BorderRadius="25"
+                        TextColor="OrangeRed"
+                        Text="REGISTRARSE"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <StackLayout
+                        Margin="-30,20"
+                        Orientation="Horizontal"                                           
+                        HorizontalOptions="StartAndExpand">
+                        <Image
+                            Margin="10,0"
+                            Source="fb_logo"
+                            WidthRequest="35">
+                        </Image>
+                        <Image
+                            Margin="10,0"
+                            Source="insta_logo"
+                            WidthRequest="35">
+                        </Image>
+                        <Image
+                            Margin="10,0"
+                            Source="tw_logo"
+                            WidthRequest="35">
+                        </Image>
+                        <Image
+                            Margin="10,0"
+                            Source="google_logo"
+                            WidthRequest="35">
+                        </Image>
+                    </StackLayout>
+
+                </StackLayout>
+                
+          
+                
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
