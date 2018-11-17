@@ -181,4 +181,31 @@
   <ItemGroup>
     <BundleResource Include="Resources\tw_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\menu_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\whatsapp_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\caja_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hb_pollo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hb_carne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\enunmo_vista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\desa_arepa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\combo_emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_arrow_right.png" />
+  </ItemGroup>
 </Project>

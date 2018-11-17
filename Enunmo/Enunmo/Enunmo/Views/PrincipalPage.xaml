@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Enunmo.Views.PrincipalPage"
+            BindingContext="{Binding Main, Source={StaticResource Locator}}"
+            Title="Menú Principal!">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Menú" 
+                 Icon="menu_icon">
+        <ScrollView>
+            <StackLayout
+                BindingContext="{Binding Principal}">
+                <Label
+                    Text="HAMBURGUESAS EN UN MOMENTICO"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Large"
+                    BackgroundColor="OrangeRed"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Margin="5"
+                    HorizontalTextAlignment="Center">
+                </Label>
+                <Grid
+                    HorizontalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="120"/>                        
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Text="De Carne"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="hb_carne"
+                        Margin="3"
+                        Grid.Row="1"
+                        Grid.Column="0">
+                    </Image>
+                    
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$6.900"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                        
+                    <Image
+                        Source="hb_carne"
+                        Margin="3"
+                        Grid.Row="1"
+                        Grid.Column="2">
+                    </Image>
+                    <Label
+                        Text="Combo Carne"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Margin="3"
+                        BackgroundColor="Black">
+
+                    </Label>
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="1"                        
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$4.900"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Image
+                        Source="hb_pollo"
+                        Margin="3"                        
+                        Grid.Row="1"
+                        Grid.Column="1">
+                    </Image>
+                    <Label
+                        Text="De Pollo"
+                        TextColor="White" 
+                        FontAttributes="Bold"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="3"
+                        BackgroundColor="Black"
+                        >
+                    </Label>
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="2"                        
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$8.500"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Label
+                        Text="Combo Pollo"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="hb_pollo"
+                        Margin="3"
+                        Grid.Row="4"
+                        Grid.Column="0">
+                    </Image>
+
+                    <Button
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$6.500"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    
+                </Grid>
+                <Label
+                    Text="EMPANADAS EN UN MOMENTICO"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Large"
+                    BackgroundColor="OrangeRed"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Margin="5"
+                    HorizontalTextAlignment="Center">
+
+                </Label>
+                <Grid
+                    HorizontalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="120"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Text="De Carne"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="1"
+                        Grid.Column="0">
+                    </Image>
+
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$1.500"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Label
+                        Text="De Pollo"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="1"
+                        Grid.Column="1">
+                    </Image>
+
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$1.500"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Label
+                        Text="Combo Tinto"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="1"
+                        Grid.Column="2">
+                    </Image>
+
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$2.000"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Label
+                        Text="Combo x 7"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="4"
+                        Grid.Column="0">
+                    </Image>
+
+                    <Button
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$10.000"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Label
+                        Text="Combo x 15"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="4"
+                        Grid.Column="1">
+                    </Image>
+
+                    <Button
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$15.000"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+
+
+
+                </Grid>
+                <Label
+                    Text="CHORIZOS EN UN MOMENTICO"
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="Large"
+                    BackgroundColor="OrangeRed"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Margin="5"
+                    HorizontalTextAlignment="Center">
+
+                </Label>
+                <Grid
+                    HorizontalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="120"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Text="Chorizo"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="1"
+                        Grid.Column="0">
+                    </Image>
+
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$1.500"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Label
+                        Text="Con Arepa"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="1"
+                        Grid.Column="1">
+                    </Image>
+
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$2.500"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Label
+                        Text="Con Pan"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="1"
+                        Grid.Column="2">
+                    </Image>
+
+                    <Button
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$3.000"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Label
+                        Text="Choripapa"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="4"
+                        Grid.Column="0">
+                    </Image>
+
+                    <Button
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$4.000"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+                    <Label
+                        Text="Choripan"
+                        TextColor="White"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Center"
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        FontAttributes="Bold"
+                        BackgroundColor="Black"
+                        Margin="3">
+                    </Label>
+                    <Image
+                        Source="combo_emp"
+                        Margin="3"
+                        Grid.Row="4"
+                        Grid.Column="1">
+                    </Image>
+
+                    <Button
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        BackgroundColor="OrangeRed"
+                        BorderRadius="10"
+                        TextColor="White"
+                        VerticalOptions="CenterAndExpand"
+                        Text="$3.000"
+                        FontAttributes="Bold"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}">
+                    </Button>
+
+
+
+                </Grid>
+
+
+
+            </StackLayout>
+
+        </ScrollView>
+        
+    </ContentPage>
+
+    <ContentPage Title="Caja"
+                 Icon="caja_icon">
+        <StackLayout>
+            <Label
+                Text="Caja en un momentico">
+            </Label>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="WhatsApp"
+                 Icon="whatsapp_icon">
+        <StackLayout>
+            <Label
+                Text="WhatsApp en un momentico">
+            </Label>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

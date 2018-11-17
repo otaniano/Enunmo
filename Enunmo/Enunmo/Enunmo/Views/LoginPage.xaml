@@ -20,14 +20,16 @@
                         VerticalOptions="Center">
                     </Image>
                 </ScrollView>
-
+       
                 <Button
                     Text="DOMICILIOS: 3192489193"
                     TextColor="White"                    
                     BackgroundColor="OrangeRed"
                     HorizontalOptions="CenterAndExpand"
                     BorderRadius="20"
-                    HeightRequest="35">
+                    HeightRequest="35"
+                    IsEnabled="{Binding IsEnable, Mode=TwoWay}"
+                    Command="{Binding DomiCommand}">
 
                 </Button>
                 <ActivityIndicator

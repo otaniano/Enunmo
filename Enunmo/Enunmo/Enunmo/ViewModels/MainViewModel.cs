@@ -9,12 +9,42 @@
                 get;
                 set;
             }
+        public PrincipalViewModel Principal
+            {
+                get;
+                set;
+            }
+        public PaisesViewModel Paises
+            { 
+            get;
+            set;
+            }
         #endregion
         #region Constructors
         public MainViewModel()
         {
-            this.Login = new LoginViewModel();
+            instance = this;
+            this.Login = new LoginViewModel();            
         }
+        
+        #endregion
+
+        #region Singleton
+        private static MainViewModel instance;
+        public static MainViewModel GetInstance()
+        {
+            if (instance == null)
+            {
+                return new MainViewModel();
+
+            }
+            return instance;
+        }
+
+
+        }
+       
+        
         #endregion
     }
-}
+
