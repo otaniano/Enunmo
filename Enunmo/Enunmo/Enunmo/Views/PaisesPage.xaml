@@ -7,14 +7,14 @@
     Title="Paises">
     <ContentPage.Content>
        <StackLayout
-            BindingContext="{Binding Lands}"
+            BindingContext="{Binding Paises}"
            Padding="5"           
            >
            <ListView 
                 HasUnevenRows="true" 
                 IsPullToRefreshEnabled="true"
                 IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
-                ItemsSource="{Binding Lands}"
+                ItemsSource="{Binding Paises}"
                 RefreshCommand="{Binding RefreshCommand}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
