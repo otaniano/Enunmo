@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Linq;
     using System.Windows.Input;
     using GalaSoft.MvvmLight.Command;
     using Models;
@@ -17,9 +18,24 @@
         #region Attributes
         private ObservableCollection<Pais> paises;
         private bool isRefreshing;
+        private string filter;
+        private bool searchCommand;
+        private List<Pais> paisesList;
         #endregion
 
         #region Properties
+
+
+        public string Filter
+        {
+            get { return this.filter; }
+            set
+            {
+                SetValue(ref this.filter, value);
+                this.Search();
+            }
+        }
+
         public ObservableCollection<Pais> Paises
 
         {
@@ -33,6 +49,10 @@
             get { return this.isRefreshing; }
             set { SetValue(ref isRefreshing, value); }
         }
+
+
+
+
         #endregion
         #region Constuctors
         public PaisesViewModel()
@@ -75,8 +95,7 @@
                 return;
             }
 
-            var list = (List<Pais>)response.Result;
-            this.Paises = new ObservableCollection<Pais>(list);
+            this.paisesList = (List<Pais>)response.Result;
             this.IsRefreshing = false;
         }
 
@@ -85,10 +104,35 @@
         public ICommand RefreshCommand
         {
             get
-            { 
+            {
                 return new RelayCommand(LoadPaises);
             }
         }
+        public ICommand SearchCommand
+        {
+            get
+            {
+                return new RelayCommand(Search);
+            }
+        }
+        private void Search()
+        {
+            if (string.IsNullOrEmpty(this.Filter))
+            {
+                this.Paises = new ObservableCollection<Pais>(
+                    this.paisesList);
+            }
+            else
+            {
+                this.Paises = new ObservableCollection<Pais>(
+                    this.paisesList.Where(
+                        p => p.Name.ToLower().Contains(this.Filter.ToLower()) ||
+                             p.Capital.ToLower().Contains(this.Filter.ToLower())));
+                        
+            }
+        }
         #endregion
+
     }
 }
+
